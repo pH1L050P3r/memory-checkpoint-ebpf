@@ -7,17 +7,17 @@ Do "make" to build executables. <br />
 
 Content:
 --------
-There are three executables. <br />
+There are following files. <br />
 ```
-fork:     This measures the throughput of the fork-based method discussed in the assignment.
-context:  This measures the throughput of your my_precious system call. Use it when your implementation is ready.
-compare:  This can be used to compare fork-based method to your implementation. Use this for your final performance measurement when your implementation is ready.
+testcase:     This runs the testcases and measures the latency.
+checkpoint:  code for checkpointing, signal the eBPF to start checkpointing and recover.
+utils:  Contains implementation of different testcases.
 ```
 
 Parameters:
 -----------
-All executables accept three parameters: <br />
+Executables accept two parameters: <br />
 ```
-t: Timeout (in seconds, default 60).
+t: Timeout (in seconds, default 20).
 n: Number of elements in the buffer as power of 2 (default 1<<10). Use it to configure program size.
 ```
